@@ -1,2 +1,2 @@
 # KSU-AI-Club-Site
-built with next.js hosted on vercel
+built with next.js hosted on vercel by @RyanTren
