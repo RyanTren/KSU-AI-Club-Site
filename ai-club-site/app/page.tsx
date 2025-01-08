@@ -120,7 +120,13 @@ export default function Home() {
       </section>
 
       <Gallery />
-      <PhotoBoard />
+
+      <section className="py-20 px-4 bg-ksu-black">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center text-ksu-white">AI Hackathon 2024 Highlights</h2>
+          <PhotoBoard />
+        </div>
+      </section>
     </main>
   )
 }
