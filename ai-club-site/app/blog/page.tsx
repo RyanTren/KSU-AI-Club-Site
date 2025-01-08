@@ -107,7 +107,7 @@ const AuthorCard = ({ author }: { author: Author }) => (
 
 export default function Blog() {
   return (
-    <main className="min-h-screen pt-20 pb-16">
+    <main className="min-h-screen pt-20 pb-16 bg-ksu-gold">
       <section className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8">AI Club Blog</h1>
         <AuthorCard author={author} />
@@ -115,7 +115,7 @@ export default function Blog() {
           {blogPosts.map((post, index) => (
             <article 
               key={index} 
-              className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow shadow-md"
             >
               <h2 className="text-2xl font-bold mb-2">
                 <a 

@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import React from "react";
+import { FlipWordsDemo } from "@/components/flip-words-demo";
 
 interface LeaderProps {
   name: string;
@@ -8,6 +10,8 @@ interface LeaderProps {
   imageUrl?: string;
   linkedinUrl?: string;
 }
+
+
 
 const LeaderCard = ({ name, title, email, bio, imageUrl, linkedinUrl }: LeaderProps) => (
   <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-lg">
@@ -83,12 +87,12 @@ const leaders = [
 
 export default function About() {
   return (
-    <main className="min-h-screen pt-20 pb-16">
+    <main className="min-h-screen pt-20 pb-16 bg-ksu-gray">
       <section className="max-w-7xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-4">Our Leadership</h1>
-        <p className="text-xl text-gray-600 text-center mb-12">
-          Meet the passionate individuals driving the AI Club forward.
-        </p>
+        <div className="text-xl text-gray-600 text-center mb-12">
+          <FlipWordsDemo />
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {leaders.map((leader) => (
