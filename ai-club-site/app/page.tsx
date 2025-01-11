@@ -3,6 +3,17 @@
 import { BackgroundBoxesDemo } from "@/components/background-boxes-demo"
 import Gallery from '@/components/Gallery'
 import PhotoBoard from '@/components/PhotoBoard'
+import Header from '@/components/Header'
+
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+import { Boxes } from "@/components/ui/background-boxes";
+import Image from 'next/image'
+import Link from 'next/link'
+
+import { TypewriterEffect } from "@/components/ui/typewriter-effect"
 
 export default function Home() {
   const words = [
@@ -34,9 +45,11 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
+      <Header />
       {/* Hero Section */}
       <section className="h-screen relative">
-        <BackgroundBoxesDemo words={words} />
+        {/* <BackgroundBoxesDemo words={words} /> */}
+        
       </section>
 
       {/* About Section */}
