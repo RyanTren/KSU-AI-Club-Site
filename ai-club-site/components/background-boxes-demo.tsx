@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Boxes } from "./ui/background-boxes";
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,9 +14,19 @@ interface BackgroundBoxesDemoProps {
 }
 
 export function BackgroundBoxesDemo({ words }: BackgroundBoxesDemoProps) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const handleScrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="h-screen relative w-full overflow-hidden bg-ksu-black flex flex-col items-center justify-center">
