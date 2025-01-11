@@ -48,7 +48,7 @@ export default function Home() {
       <Header />
       {/* Hero Section */}
       <section className="h-screen relative">
-        {/* <BackgroundBoxesDemo words={words} /> */}
+        <BackgroundBoxesDemo words={words} />
         
       </section>
 
