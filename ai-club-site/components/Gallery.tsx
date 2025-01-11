@@ -32,21 +32,42 @@ export default function Gallery() {
           sizes="100vw"
           className="object-cover"
           priority
+          quality={75}
+          loading="eager"
         />
       </motion.div>
 
-      <button
-        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-ksu-white/50 p-2 rounded-full hover:bg-ksu-gold"
-        onClick={() => paginate(-1)}
-      >
-        ←
-      </button>
-      <button
-        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-ksu-white/50 p-2 rounded-full hover:bg-ksu-gold"
-        onClick={() => paginate(1)}
-      >
-        →
-      </button>
+      {/* Navigation Buttons */}
+      <div className="absolute inset-0 flex items-center justify-between px-4 z-10">
+        <button
+          className="bg-ksu-white/50 hover:bg-ksu-gold text-ksu-black w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+          onClick={() => paginate(-1)}
+          aria-label="Previous image"
+        >
+          ←
+        </button>
+        <button
+          className="bg-ksu-white/50 hover:bg-ksu-gold text-ksu-black w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+          onClick={() => paginate(1)}
+          aria-label="Next image"
+        >
+          →
+        </button>
+      </div>
+
+      {/* Dots Indicator */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentIndex ? 'bg-ksu-gold' : 'bg-ksu-white/50'
+            }`}
+            aria-label={`Go to image ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   )
 }

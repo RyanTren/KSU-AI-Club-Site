@@ -66,7 +66,7 @@ export default function PhotoBoard() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"
       >
         {hackathonImages.map((image, index) => (
           <motion.div
@@ -81,7 +81,9 @@ export default function PhotoBoard() {
               src={image}
               alt={`Hackathon photo ${index + 1}`}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               className="object-cover"
+              loading="lazy"
             />
           </motion.div>
         ))}
