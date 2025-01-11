@@ -52,7 +52,7 @@ export default function Home() {
       <Header />
       {/* Hero Section */}
       <section className="h-screen relative w-full overflow-hidden bg-ksu-black flex flex-col items-center justify-center">
-        <div className="absolute inset-0 w-full h-full bg-ksu-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+        {/* <div className="absolute inset-0 w-full h-full bg-ksu-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" /> */}
         <Boxes className="border-ksu-gold" />
 
         <div className="relative z-30 flex flex-col items-center">
