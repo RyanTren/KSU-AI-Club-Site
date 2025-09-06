@@ -29,52 +29,51 @@
 //   let newVars = Object.fromEntries(
 //     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
 //   );
- 
+
 //   addBase({
 //     ":root": newVars,
 //   });
 // }
 
-
-
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+    default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{ts,tsx}"],
-  darkMode: "class",
-  theme: {
-    extend: {
+    content: ['./src/**/*.{ts,tsx}'],
+    darkMode: 'class',
+    theme: {
+        extend: {
             colors: {
-              ksu: {
-                gold: '#ffc629',    // Hooty Hoo Gold
-                black: '#2D2926',   // Legacy Black
-                gray: '#B2B4B2',    // Slap Rock Gray
-                white: '#FFFFFF',   // Bachelor's White
-              },
-              background: "var(--background)",
-              foreground: "var(--foreground)",
+                ksu: {
+                    gold: '#ffc629', // Hooty Hoo Gold
+                    black: '#2D2926', // Legacy Black
+                    gray: '#B2B4B2', // Slap Rock Gray
+                    white: '#FFFFFF', // Bachelor's White
+                },
+                background: 'var(--background)',
+                foreground: 'var(--foreground)',
             },
-          },
-  },
-  plugins: [
-    // rest of the code
-    addVariablesForColors,
-  ],
+        },
+    },
+    plugins: [
+        // rest of the code
+        addVariablesForColors,
+        require('@tailwindcss/typography'),
+    ],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
+    let allColors = flattenColorPalette(theme('colors'));
+    let newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    );
 
-  addBase({
-    ":root": newVars,
-  });
+    addBase({
+        ':root': newVars,
+    });
 }
