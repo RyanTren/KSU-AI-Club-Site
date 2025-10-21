@@ -140,7 +140,14 @@ const AuthorCard = ({ author }: { author: Author }) => (
 
 export default async function Blog() {
     const postsDirectory = path.join(process.cwd(), 'posts');
-    const fileNames = fs.readdirSync(postsDirectory);
+    let fileNames: string[] = [];
+
+    try{
+        const fileNames = fs.readdirSync(postsDirectory);
+    } catch{
+        console.warn("No local blog posts directory found. Skipping markdown posts.");
+    }
+    
 
     const markdownPosts: UnifiedBlogPost[] = fileNames
         .map((fileName) => {
