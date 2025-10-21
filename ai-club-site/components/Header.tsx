@@ -68,6 +68,15 @@ export default function Header() {
                                 <span className="absolute left-0 bottom-0 w-full h-0.5 bg-ksu-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                href="/events"
+                                className="text-lg font-medium text-ksu-white hover:text-ksu-gold transition-colors duration-300 relative group"
+                            >
+                                Events
+                                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-ksu-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                            </Link>
+                        </li>
                     </ul>
 
                     {/* Mobile Menu Button */}
@@ -159,6 +168,15 @@ export default function Header() {
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Blog
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/events"
+                                        className="block text-ksu-white hover:text-ksu-gold py-2 px-4 text-lg transition-colors duration-300"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        Events
                                     </Link>
                                 </li>
                             </motion.ul>
