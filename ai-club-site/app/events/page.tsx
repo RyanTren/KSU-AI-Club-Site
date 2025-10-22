@@ -33,10 +33,10 @@ export default function EventsPage() {
                                 Opening Day
                             </p>
                             <p className="text-xl text-ksu-white mb-1">
-                                11/17 8pm - 10pm
+                                11/17 6:30pm - 11pm
                             </p>
                             <p className="text-lg text-ksu-white">
-                                Academic Bldg H200
+                                Q202(ETC Auditorium)
                             </p>
                         </div>
                         <div className="bg-ksu-black p-5 rounded-lg shadow-lg border border-ksu-gold/50">
@@ -44,15 +44,32 @@ export default function EventsPage() {
                                 Judging Day
                             </p>
                             <p className="text-xl text-ksu-white mb-1">
-                                11/21 4:30pm - 7:30pm
+                                11/21 1:30pm - 4:30pm
                             </p>
                             <p className="text-lg text-ksu-white">
-                                Atrium J1031
+                                Q202(ETC Auditorium)
                             </p>
                         </div>
                     </div>
                     <p className="text-5xl font-extrabold text-ksu-gold mb-10 text-center">
                         Prize Pool: $1000+
+                    </p>
+                </section>
+                <section className="text-center mt-16 p-6 bg-ksu-gray/20 rounded-xl shadow-inner border border-ksu-white/10">
+                    <h2 className="text-3xl font-extrabold text-ksu-white mb-5 tracking-wide">
+                        Rules
+                    </h2>
+                    <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
+                        Projects must be completed within the hackathon period
+                    </p>
+                    <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
+                        All projects must utilize AI in some capacity
+                    </p>
+                    <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
+                        Must be a KSU student to participate
+                    </p>
+                    <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
+                        4 person team maximum
                     </p>
                 </section>
 
