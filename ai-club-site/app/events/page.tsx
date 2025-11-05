@@ -19,7 +19,7 @@ export default function EventsPage() {
                     </h2>
                     <div className="flex justify-center mb-8">
                         <Image
-                            src="/assets/ai-hackathon-image.png"
+                            src="/assets/ai-hackathon-image2.png"
                             alt="KSU Hack-A-Thon 2025"
                             width={700}
                             height={400}
@@ -52,7 +52,7 @@ export default function EventsPage() {
                         </div>
                     </div>
                     <p className="text-5xl font-extrabold text-ksu-gold mb-10 text-center">
-                        Prize Pool: $1000+
+                        Prize Pool: $3000
                     </p>
                 </section>
                 <section className="text-center mt-16 p-6 bg-ksu-gray/20 rounded-xl shadow-inner border border-ksu-white/10">
@@ -70,6 +70,24 @@ export default function EventsPage() {
                     </p>
                     <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
                         4 person team maximum
+                    </p>
+                </section>
+
+                <section className="text-center mt-16 p-6 bg-ksu-gray/20 rounded-xl shadow-inner border border-ksu-white/10">
+                    <h2 className="text-3xl font-extrabold text-ksu-white mb-5 tracking-wide">
+                        Sponsors
+                    </h2>
+                    <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
+                        Assurant, ScanSource, CCSE
+                    </p>
+                </section>
+
+                <section className="text-center mt-16 p-6 bg-ksu-gray/20 rounded-xl shadow-inner border border-ksu-white/10">
+                    <h2 className="text-3xl font-extrabold text-ksu-white mb-5 tracking-wide">
+                        Join Discord for more information!
+                    </h2>
+                    <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
+                        <a href="https://discord.gg/qSS56d5ZdS" className='text-ksu-gold'>Discord Link</a>
                     </p>
                 </section>
 
