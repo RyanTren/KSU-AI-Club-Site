@@ -69,7 +69,7 @@ export default function EventsPage() {
                         Must be a KSU student to participate
                     </p>
                     <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
-                        4 person team maximum
+                        4 people per team maximum
                     </p>
                 </section>
 
@@ -79,6 +79,15 @@ export default function EventsPage() {
                     </h2>
                     <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
                         Assurant, ScanSource, CCSE
+                    </p>
+                </section>
+
+                <section className="text-center mt-16 p-6 bg-ksu-gray/20 rounded-xl shadow-inner border border-ksu-white/10">
+                    <h2 className="text-3xl font-extrabold text-ksu-white mb-5 tracking-wide">
+                        OwlLife RSVP
+                    </h2>
+                    <p className="text-xl text-ksu-white leading-relaxed max-w-3xl mx-auto">
+                        <a href="https://owllife.kennesaw.edu/event/11885006" className='text-ksu-gold'>OwlLife Link</a>
                     </p>
                 </section>
 
